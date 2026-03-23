@@ -28,9 +28,9 @@ build {
 
   provisioner "shell" {
     inline = [
-      "sudo yum update -y",
-      "sudo yum install -y nginx",
-      "sudo systemctl start nginx"
-    ]
+  "sudo yum update -y",
+  "sudo amazon-linux-extras install nginx1 -y",
+  "sudo systemctl start nginx"
+]
   }
 }
