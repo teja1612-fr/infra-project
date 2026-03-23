@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/teja1612-fr/infra-project.git'
-            }
-        }
-
         stage('Build AMI') {
             steps {
                 dir('packer') {
