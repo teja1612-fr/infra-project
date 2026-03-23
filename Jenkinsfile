@@ -21,11 +21,14 @@ pipeline {
         }
 
         stage('Terraform Apply') {
-            steps {
-                dir('terraform') {
-                    sh 'terraform apply -auto-approve'
-                }
-            }
+    steps {
+        dir('terraform') {
+            sh '''
+            terraform destroy -auto-approve || true
+            terraform apply -auto-approve
+            '''
         }
+    }
+}
     }
 }
