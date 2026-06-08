@@ -1,4 +1,4 @@
- Infrastructure Automation Project
+# Infrastructure Automation Project
 
 ## What This Does
 
